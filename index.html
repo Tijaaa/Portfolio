@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- En-tête -->
+<head>
+	<title>Site</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="src/main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+
+	<link rel="stylesheet" type="text/css" href="src/bootstrap/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="src/js/bootstrap/bootstrap.min.js">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<button onclick="topFunction()" id="myBtn" title="Aller en haut"><i class="fas fa-arrow-up"></i></button> 
+	
+	<div class="topnav" id="myTopnav">
+		<div class="max-width">
+			<!-- Ancres -->
+			  <a href="#accueil">Accueil</a>
+			  <a href="#infos">Infos</a>
+			<!-- Fin Ancres -->
+		  	  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+
+	<!-- Ancre accueil -->
+	<header id="accueil" class="parallax">
+		<h1>Bienvenue sur mon site</h1>
+	</header>
+
+	<!-- Ancre infos -->
+	<section id="infos">
+		<h1>Infos</h1>
+		<p>Certaines infos sur moi</p>
+		<hr>
+
+		<div class="row features">
+			<div class="col">
+				<p>Je m'appelle Tijani, j'ai 15 ans et je suis actuellement étudiant,<br>je suis passionné de jeux vidéo et de développement informatique.<br>J'ai commencé à coder ce site à la Toussaint et je risque de plus le <br>développer par la suite, alors restez à l'affut des nouvelles MAJ !</p>
+			</div>
+			<div>
+				<table>
+
+					<thead>
+						<tr>
+							<th>Language</th>
+							<th>Connaissance</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>HTML 5</td>
+							<td>22 %</td>
+						</tr>
+						<tr>
+							<td>CSS 3</td>
+							<td>15 %</td>
+						</tr>
+						<tr>
+							<td>LUA</td>
+							<td>40 %</td>
+						</tr>
+						<tr>
+							<td>JAVA SCRIPT</td>
+							<td>6 %</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+							<td>7 %</td>
+						</tr>
+						<tr>
+							<td>PYTHON</td>
+							<td>10 %</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</section>
+
+	<!-- Bas -->
+	<footer>
+		<div class="footer">
+			<div class="copyright-notice">
+				<a target="_blank" href="#head"> Fait avec le <font color="red">❤</font> par Tijani</a>
+			</div>
+			<div class="copyright-notice">
+				<p> </p>
+			</div>
+			<div class="copyright-notice">
+				<p>Ce site à été coder entièrement en Css 3, Html 5 & JS</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $("a").on('click', function(event) {
+
+		    if (this.hash !== "") {
+		      event.preventDefault();
+
+		      var hash = this.hash;
+
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 100, function(){
+		   
+		        window.location.hash = hash;
+		      });
+		    }
+		  });
+		});
+	</script>
+
+	<script>
+		function myFunction() {
+		    var x = document.getElementById("myTopnav");
+		    if (x.className === "topnav") {
+		        x.className += " responsive";
+		    } else {
+		        x.className = "topnav";
+		    }
+		}
+	</script>
+
+	<script>
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
+
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+	</script>
+
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="src/js/main.js" type="text/javascript"></script>
+
+</body>
+</html>
